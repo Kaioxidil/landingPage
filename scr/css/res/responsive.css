@@ -1,0 +1,87 @@
+@import url(/scr/css/style.css);
+
+@media only screen and (max-width: 1024px) {
+    html {
+      font-size: 60%;
+    }
+  
+    h1 {
+      font-size: 6rem;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    html {
+      font-size: 58%;
+    }
+    .max-width {
+      padding: 0 2rem;
+    }
+  }
+  
+  @media only screen and (max-width: 425px) {
+  .navigation{
+    width: 500px;
+  }
+
+    .home{
+      text-align: center;
+      display: block;
+    }
+
+    .home h1{
+      font-size: 20px;
+    }
+  }
+
+
+   /* Nav mobile */
+
+ @media (max-width: 785px) {
+    
+  .navigation{
+      padding: 20px 150px;
+      margin-left: -50px;
+    }
+
+    .menu{
+      display: block;
+    }
+
+    .menu.ativo .bar:nth-child(1){
+      background: var(--red); 
+        transform:  translateY(8px)  rotate(45deg);
+    }
+
+    .menu.ativo .bar:nth-child(2){
+      opacity: 0;
+    }
+
+    .menu.ativo .bar:nth-child(3){
+      transform: translateY(-8px) rotate(-45deg); 
+      background: var(--red);
+    }
+
+    .nav-menu{
+      position: fixed;
+      right: -100%;
+      top: 70px;
+      width: 30%;
+      height: 100%;
+      flex-direction: column;
+      background: var(--nav-bg-color);
+      gap: -5px;
+      transition: 0.3s all;
+      z-index:1;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .nav-menu.ativo{
+      right: 0;
+    }
+
+    .nav-item{
+      margin: 16px 0;
+    }
+     
+}
